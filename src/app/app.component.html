@@ -1,0 +1,25 @@
+<div class="app-container">
+    <p-card class="app-routing-card">
+        <div class="app-routing-card-container">
+            <p-button
+                    [routerLinkActive]="['active']"
+                    [routerLink]="['/vessels']"
+                    label="Vessels"
+                    styleClass="p-button-text">
+            </p-button>
+            <p-button
+                    [routerLinkActive]="['active']"
+                    [routerLink]="['/emissions']"
+                    label="Emissions"
+                    styleClass="p-button-text">
+            </p-button>
+            <p-dropdown
+                    (onChange)="handleThemeChange($event)"
+                    [options]="themeOptions">
+            </p-dropdown>
+        </div>
+    </p-card>
+    <main class="app-main">
+        <router-outlet></router-outlet>
+    </main>
+</div>

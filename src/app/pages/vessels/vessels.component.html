@@ -1,0 +1,13 @@
+<p-card header="Vessels" class="card-outline card-full-height card-vessels">
+    <ng-container *ngIf="data$ | async as vessels">
+        <ag-grid-angular *ngIf="vessels.value as vesselsRowData"
+                         [ngClass]="{'ag-theme-alpine': (themeService.theme$ | async)==='Light', 'ag-theme-alpine-dark': (themeService.theme$ | async) ==='Dark'}"
+                         class="vessels-grid"
+                         [columnDefs]="columnDefs"
+                         [rowData]="vesselsRowData">
+        </ag-grid-angular>
+        <p-progressSpinner *ngIf="vessels.loading"></p-progressSpinner>
+        <app-view-empty *ngIf="vessels.empty"></app-view-empty>
+        <app-view-error *ngIf="vessels.error"></app-view-error>
+    </ng-container>
+</p-card>

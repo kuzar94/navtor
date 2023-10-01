@@ -1,0 +1,26 @@
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+  background-color: var(--highlight-bg);
+
+  .app-routing-card {
+    .app-routing-card-container {
+      display: flex;
+      gap: 24px;
+
+      p-dropdown {
+        display: block;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.app-main {
+  height: 100%;
+}

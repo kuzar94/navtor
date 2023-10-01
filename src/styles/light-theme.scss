@@ -1,0 +1,9 @@
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+
+p-button.active {
+  button {
+    background: rgba(147, 197, 253, 0.27);
+    color: #005fcc;
+    border-color: transparent;
+  }
+}

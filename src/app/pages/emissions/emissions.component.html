@@ -1,0 +1,22 @@
+<p-card header="Emissions" class="card-outline card-full-height card-emissions">
+    <ng-container *ngIf="data$ | async as emissionsState">
+        <ng-container *ngIf="emissionsState.emissions as emissions">
+            <ng-container *ngIf="emissions.value as vesselsRowData">
+                <div class="emission-select">
+                    Vessel id:
+                    <p-dropdown
+                            [(ngModel)]="selectedEmissionValue"
+                            (onChange)="handleVesselChange($event)"
+                            [options]="vesselsRowData"
+                            optionLabel="id">
+                    </p-dropdown>
+                </div>
+                <div class="emissions-chart" [chart]="chart">
+                </div>
+            </ng-container>
+            <p-progressSpinner *ngIf="emissions.loading"></p-progressSpinner>
+            <app-view-empty *ngIf="emissions.empty"></app-view-empty>
+            <app-view-error *ngIf="emissions.error"></app-view-error>
+        </ng-container>
+    </ng-container>
+</p-card>

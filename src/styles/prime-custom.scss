@@ -1,0 +1,60 @@
+.p-card-body {
+  padding: 24px;
+}
+
+.p-card-content {
+  padding: 0;
+}
+
+.p-button:focus {
+  box-shadow: none
+}
+
+p-card.card-outline .p-card {
+  border: 1px solid var(--highlight-bg);
+
+  .p-card-title {
+    margin-bottom: 48px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: -24px;
+      width: calc(100% + 48px);
+      height: 1px;
+      background: var(--highlight-bg);
+    }
+  }
+}
+
+p-card.card-full-height {
+  height: 100%;
+  display: block;
+
+  .p-card {
+    height: 100%;
+  }
+
+  .p-card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p-card-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+}
+
+p-progressSpinner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(3px);
+}

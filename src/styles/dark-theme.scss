@@ -1,0 +1,16 @@
+@import 'primeng/resources/themes/lara-dark-blue/theme.css';
+@import '~ag-grid-community/styles/ag-grid.css';
+@import '~ag-grid-community/styles/ag-theme-alpine.css';
+
+.ag-theme-alpine-dark {
+  --ag-row-hover-color: #071426;
+  --ag-border-color: rgba(147, 197, 253, 0.16);
+}
+
+p-button.active {
+  button {
+    background: rgba(147, 197, 253, 0.04);
+    color: #93C5FD;
+    border-color: transparent;
+  }
+}

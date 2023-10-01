@@ -1,0 +1,19 @@
+:host {
+  height: 100%;
+  display: block;
+}
+
+.card-emissions {
+  position: relative;
+
+  .emissions-chart {
+
+  }
+
+  .emission-select {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
