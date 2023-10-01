@@ -54,7 +54,6 @@ export class EmissionsComponent {
           this.themeService.theme$
         ]).pipe(takeUntil(this.destroy$)).subscribe(
         ([emissionsState, vesselsState, theme]) => {
-          console.log('x')
           this.selectedEmissionValue = this.getSelectedEmission(emissionsState) ?? null;
           const vesselName = this.getVesselName(emissionsState, vesselsState) ?? 'Error while fetching vessel name';
           this.generateChart(emissionsState, vesselName, theme);
